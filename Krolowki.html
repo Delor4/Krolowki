@@ -71,7 +71,7 @@
                 ["1","2","3","4","5","6","7","8","błąd"]];
             var odstep=30;
             var szerPola=30;
-            var fontSize=10;
+            var fontSize=12;
             var startx=gdziex*(szerPola*10+odstep/2)+odstep/2;
             var starty=gdziey*(szerPola*10+odstep/2)+odstep/2;
             gf.beginPath();
@@ -83,10 +83,10 @@
             for (var i = 0; i < 8; i++) {
                 gf.strokeStyle="white";
                 gf.font=fontSize+"px sans-serif";
-                gf.strokeText(alfabet[0][i],startx+(i+1)*szerPola+szerPola/2-fontSize/2,starty+szerPola/2+fontSize/2);
-                gf.strokeText(alfabet[0][i],startx+(i+1)*szerPola+szerPola/2-fontSize/2,starty+9*szerPola+szerPola/2+fontSize/2);
-                gf.strokeText(alfabet[1][i],startx+szerPola/2-fontSize/2,starty+(8-i)*szerPola+szerPola/2+fontSize/2);
-                gf.strokeText(alfabet[1][i],9*szerPola+startx+szerPola/2-fontSize/2,starty+(8-i)*szerPola+szerPola/2+fontSize/2);
+                gf.strokeText(alfabet[0][i],startx+(i+1)*szerPola+szerPola/2-gf.measureText(alfabet[0][i]).width/2,starty+szerPola/2+fontSize/2);
+                gf.strokeText(alfabet[0][i],startx+(i+1)*szerPola+szerPola/2-gf.measureText(alfabet[0][i]).width/2,starty+9*szerPola+szerPola/2+fontSize/2);
+                gf.strokeText(alfabet[1][i],startx+szerPola/2-fontSize/2,starty+(8-i)*szerPola+szerPola/2+gf.measureText(alfabet[1][i]).width/2);
+                gf.strokeText(alfabet[1][i],9*szerPola+startx+szerPola/2-gf.measureText(alfabet[1][i]).width/2,starty+(8-i)*szerPola+szerPola/2+fontSize/2);
                 for (var j = 0; j < 8; j++) {
                     //console.log(startx+(i+1)*szerPola,((j+1)*szerPola)+odstep/2,szerPola,szerPola);
                     gf.beginPath();
