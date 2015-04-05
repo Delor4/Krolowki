@@ -88,7 +88,6 @@
                 gf.strokeText(alfabet[1][i],startx+szerPola/2-fontSize/2,starty+(8-i)*szerPola+szerPola/2+gf.measureText(alfabet[1][i]).width/2);
                 gf.strokeText(alfabet[1][i],9*szerPola+startx+szerPola/2-gf.measureText(alfabet[1][i]).width/2,starty+(8-i)*szerPola+szerPola/2+fontSize/2);
                 for (var j = 0; j < 8; j++) {
-                    //console.log(startx+(i+1)*szerPola,((j+1)*szerPola)+odstep/2,szerPola,szerPola);
                     gf.beginPath();
                     gf.rect(startx+(i+1)*szerPola,starty+((j+1)*szerPola),szerPola,szerPola);
                     gf.closePath();
@@ -99,7 +98,6 @@
             }
 
             for(var i=0;i<sz.krolowki.length;i++){
-                //var x=sz.krolowki[i].x;
                 gf.beginPath();
                 gf.arc(startx+(sz.krolowki[i].x+1)*szerPola+szerPola/2,((8-sz.krolowki[i].y)*szerPola)+starty+szerPola/2,szerPola/3,0,Math.PI*2);
                 gf.closePath();
@@ -134,7 +132,6 @@
             if(il==8){
                 if(!czyPoprzednie(sz)) {
                     poprzednie.push(sz);
-//                    rysujSzachownice(sz, gd++);
                 }
                 return;
             }
@@ -167,7 +164,6 @@
             var odstep=30;
             var wys=y*(szerPola*10+odstep/2)+odstep/2;
             var szer=x*(szerPola*10+odstep/2)+odstep/2;
-            console.log(odp,x,y);
             gf.setSize(szer,wys);
             for(var i=0;i<odp;i++){
                 var xi=i%x;
