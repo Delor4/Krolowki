@@ -1,0 +1,3 @@
+[submodule "DelorGraph"]
+	path = DelorGraph
+	url = https://github.com/Delor4/DelorGraph.git
